@@ -1,78 +1,58 @@
-html,
-body {
-    font-family: sans-serif;
-    margin: 0;
-    height: 100%;
-}
-
-p {
-    margin-block-start: 0;
-    text-indent: 1rem;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: lightgray;
-    width: 40px;
-    margin: 1.5rem 0 1rem 0;
-}
-
-#root {
+    
+    /*index*/
+    .top_bar {position: fixed; 
+    left: 0; top: 0; right: 0; height: 50px;
+    width: 100%;
+    margin-right: auto; margin-left: auto;
     display: flex;
-    height: 100%;
-}
-
-#main-page {
-    flex-grow: 1;
-}
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-
-    border-right: 1px solid lightgray;
-}
-
-.sidebar > a {
-    margin: 0.5rem 0;
-}
-
-.page-container {
-    display: flex;
-    flex-direction: column;
-
-    padding: 0 1rem;
-}
-
-.align-center {
+    justify-content: center;
     align-items: center;
-}
+    }
+    .container {display: flex; justify-content: center;
+        margin-top: 50px;
+    }
+    .container_text {margin-left: 50px;}
 
-.socials-container {
-    display: flex;
-    justify-content: space-between;
-}
 
-.socials-card {
-    display: flex;
-    align-items: center;
+    /*topbar(nav)*/
+    .nav_name{font-size: xx-large; font-weight: bold;}
+    .nav_text{font-size: x-large; color: gray; text-decoration: none; margin-left: 20px;}
+    .nav_text:hover{font-size: x-large; color: black; margin-left: 20px;}
+    .nav_select{font-size: x-large; color: black; font-weight:  bold; text-decoration: none; margin-left: 20px;}
+    .nav_student_id{font-size: large; font-weight: bold; margin-right: 30%;}
 
-    border: 1px solid lightgray;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    margin: 1rem;
+    /*hyperlink*/
+    .hyperlink {color: rgb(160, 124, 80); text-decoration: none;}
+    .hyperlink:hover {color: rgb(85, 68, 48); text-decoration: underline;}
 
-    text-decoration: none;
-    color: unset;
-}
 
-.socials-card:hover {
-    background-color: lightgray;
-}
+    /*interested*/
+    .button {border: none;background-color: rgba(255, 0, 0, 0);}
+    div.item:nth-child(1) {background: rgb(0, 0, 0);}
+    div.item:nth-child(2) {background: rgb(255, 186, 57);}
+    div.item:nth-child(3) {background-color: rgb(146, 211, 93);}
+    #container_image{display: grid;
+        place-items: center;}
+    
 
-.socials-card > i {
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-}
+    /*schedule*/
+    #고급파이썬 {background-color: rgb(24, 161, 127);transition: background-color 0.3s ease;}
+    #고급파이썬:hover {background-color: green;}
+    #고급파이썬:hover::before {content: "고급 파이썬";color: white;font-size: 16px;}
+
+    #자료구조 {background-color: rgb(255, 112, 107);transition: background-color 0.3s ease;}
+    #자료구조:hover {background-color: green;}
+    #자료구조:hover::before {content: "자료구조";color: white;font-size: 16px;}
+
+    #웹프로그래밍 {background-color: rgb(107, 176, 255);transition: background-color 0.3s ease;}
+    #웹프로그래밍:hover {background-color: green;}
+    #웹프로그래밍:hover::before {content: "웹프로그래밍";color: white;font-size: 16px;}
+    
+    #리눅스 {background-color: rgb(255, 233, 107);transition: background-color 0.3s ease;}
+    #리눅스:hover {background-color: green;}
+    #리눅스:hover::before {content: "리눅스";color: white;font-size: 16px;}
+
+
+
+
+
