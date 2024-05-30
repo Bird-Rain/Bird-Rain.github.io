@@ -12,48 +12,16 @@ const routes = {
     "/schedule": "/pages/schedule.html",
 };
 
-function checkViewportSize() {
-    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-    var maxWidth = 620;
-    if (viewportWidth <= maxWidth) {
-        loadsmallergallery();
-    }else{
-        loadgallery();
-    }
-}
-
-const loadsmallergallery = () => {
-    var width = ($('[data-role="slider"]').attr('data-width')) / 1.5;
-    var height = ($('[data-role="slider"]').attr('data-height')) / 1.5;
-    var count = $('[data-role="slider"] div.item').length;
-    $('[data-role="slider"]').css({
-        position: 'relative', overflow: 'hidden', width: width, height: height
-    })
-        .find('.container_slide').css({
-            position: 'absolute', width: count * width, overflow: 'hidden'
-        })
-        .find('.item').css({
-            width: width, height: height, float: 'left'
-        })
-
-    var currentPage = 0;
-    var changePage = function () {
-        $('[data-role="slider"] > .container_slide').animate({ left: -currentPage * width }
-            , width);
-    };
-
-    $('#left-button').click(function () {
-        if (currentPage > 0) { currentPage--; changePage(); }
-    });
-    $('#right-button').click(function () {
-        if (currentPage < count - 1) { currentPage++; changePage(); }
-    });
-};
-
 const loadgallery = () => {
     var width = $('[data-role="slider"]').attr('data-width');
     var height = $('[data-role="slider"]').attr('data-height');
     var count = $('[data-role="slider"] div.item').length;
+    viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    var maxWidth = 620;
+    if (viewportWidth <= maxWidth) {
+        width = 250
+        height = 150
+    }
     $('[data-role="slider"]').css({
         position: 'relative', overflow: 'hidden', width: width, height: height
     })
@@ -105,7 +73,5 @@ const handleLocation = async () => {
 
 window.onpopstate = handleLocation;
 window.route = route;
-
-window.addEventListener('resize', checkViewportSize);
 
 handleLocation();
