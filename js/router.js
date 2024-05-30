@@ -12,6 +12,42 @@ const routes = {
     "/schedule": "/pages/schedule.html",
 };
 
+function checkViewportSize() {
+    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    var maxWidth = 620; // 예: 768px 미만일 때 호출
+    if (viewportWidth <= maxWidth) {
+        loadsmallergallery(); // 호출할 함수명으로 변경해주세요.
+    }
+}
+
+const loadsmallergallery = () => {
+    var width = ($('[data-role="slider"]').attr('data-width')) / 2;
+    var height = ($('[data-role="slider"]').attr('data-height')) / 2;
+    var count = $('[data-role="slider"] div.item').length;
+    $('[data-role="slider"]').css({
+        position: 'relative', overflow: 'hidden', width: width, height: height
+    })
+        .find('.container_slide').css({
+            position: 'absolute', width: count * width, overflow: 'hidden'
+        })
+        .find('.item').css({
+            width: width, height: height, float: 'left'
+        })
+
+    var currentPage = 0;
+    var changePage = function () {
+        $('[data-role="slider"] > .container_slide').animate({ left: -currentPage * width }
+            , 500);
+    };
+
+    $('#left-button').click(function () {
+        if (currentPage > 0) { currentPage--; changePage(); }
+    });
+    $('#right-button').click(function () {
+        if (currentPage < count - 1) { currentPage++; changePage(); }
+    });
+};
+
 const loadgallery = () => {
     var width = $('[data-role="slider"]').attr('data-width');
     var height = $('[data-role="slider"]').attr('data-height');
@@ -67,5 +103,7 @@ const handleLocation = async () => {
 
 window.onpopstate = handleLocation;
 window.route = route;
+
+window.addEventListener('resize', checkViewportSize);
 
 handleLocation();
