@@ -39,7 +39,7 @@ const loadsmallergallery = () => {
     var currentPage = 0;
     var changePage = function () {
         $('[data-role="slider"] > .container_slide').animate({ left: -currentPage * width }
-            , 500);
+            , width);
     };
 
     $('#left-button').click(function () {
