@@ -59,6 +59,10 @@
         .nav_select{font-size: medium; color: black; font-weight:  bold; text-decoration: none; margin-left: 20px;}
         .nav_student_id{font-size: small; font-weight: bold; margin-right: 30%;}
         p{font-size: small;}
+        #slider{
+            --data-width: 250;
+            --data-height: 150;
+        }
     }
 
 
