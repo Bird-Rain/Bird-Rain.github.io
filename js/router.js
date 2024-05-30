@@ -57,7 +57,7 @@ const handleLocation = async () => {
     } else if (path === "/interested") {
         document.getElementById("interested").classList.remove("nav_text");
         document.getElementById("interested").classList.add("nav_select");
-    } else if (path === "schedule") {
+    } else if (path === "/schedule") {
         document.getElementById("schedule").classList.remove("nav_text");
         document.getElementById("schedule").classList.add("nav_select");
     }
