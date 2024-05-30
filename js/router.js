@@ -14,15 +14,17 @@ const routes = {
 
 function checkViewportSize() {
     var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-    var maxWidth = 620; // 예: 768px 미만일 때 호출
+    var maxWidth = 620;
     if (viewportWidth <= maxWidth) {
-        loadsmallergallery(); // 호출할 함수명으로 변경해주세요.
+        loadsmallergallery();
+    }else{
+        loadgallery();
     }
 }
 
 const loadsmallergallery = () => {
-    var width = ($('[data-role="slider"]').attr('data-width')) / 2;
-    var height = ($('[data-role="slider"]').attr('data-height')) / 2;
+    var width = ($('[data-role="slider"]').attr('data-width')) / 1.5;
+    var height = ($('[data-role="slider"]').attr('data-height')) / 1.5;
     var count = $('[data-role="slider"] div.item').length;
     $('[data-role="slider"]').css({
         position: 'relative', overflow: 'hidden', width: width, height: height
