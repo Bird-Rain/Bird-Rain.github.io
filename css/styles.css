@@ -26,7 +26,7 @@
 
 
     /*interested*/
-    .image {width: 250;}
+    .image {width: 250px;}
     .button {border: none;background-color: rgba(255, 0, 0, 0);}
     div.item:nth-child(1) {background: rgb(0, 0, 0);}
     div.item:nth-child(2) {background: rgb(255, 186, 57);}
@@ -60,7 +60,7 @@
         .nav_select{font-size: medium; color: black; font-weight:  bold; text-decoration: none; margin-left: 20px;}
         .nav_student_id{font-size: small; font-weight: bold; margin-right: 30%;}
         p{font-size: small;}
-        .image {width: 150;}
+        .image {width: 150px;}
     }
 
 
