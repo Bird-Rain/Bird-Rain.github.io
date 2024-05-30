@@ -58,6 +58,7 @@
         .nav_text:hover{font-size: medium; color: black; margin-left: 20px;}
         .nav_select{font-size: medium; color: black; font-weight:  bold; text-decoration: none; margin-left: 20px;}
         .nav_student_id{font-size: small; font-weight: bold; margin-right: 30%;}
+        p{font-size: small;}
     }
 
 
