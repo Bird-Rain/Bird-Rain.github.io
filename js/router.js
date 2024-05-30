@@ -12,6 +12,16 @@ const routes = {
     "/schedule": "/pages/schedule.html",
 };
 
+const changeClass = (selectedLink) => {
+            document.querySelectorAll('a.nav_select').forEach((link) => {
+                link.classList.remove('nav_select');
+                link.classList.add('nav_text');
+            });
+
+            selectedLink.classList.remove('nav_text');
+            selectedLink.classList.add('nav_select');
+        };
+
 const loadgallery = () => {
     var width = $('[data-role="slider"]').attr('data-width');
     var height = $('[data-role="slider"]').attr('data-height');
@@ -46,6 +56,7 @@ const handleLocation = async () => {
     const html = await fetch(route).then((data) => data.text());
     document.getElementById("main-page").innerHTML = html;
     loadgallery();
+    changeClass(event.target);
 };
 
 
