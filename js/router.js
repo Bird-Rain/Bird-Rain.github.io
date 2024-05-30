@@ -13,7 +13,6 @@ const routes = {
 };
 
 const loadgallery = () => {
-    alert('Loading Gallery');
     var width = $('[data-role="slider"]').attr('data-width');
     var height = $('[data-role="slider"]').attr('data-height');
     var count = $('[data-role="slider"] div.item').length;
