@@ -14,7 +14,7 @@
     .container_text {margin-left: 50px;}
 
     /*반응형*/
-    @media all and (max-width:620px) {
+    @media (max-width:620px) {
         .nav_name{font-size: x-large; font-weight: bold;}
         .nav_text{font-size: large; color: gray; text-decoration: none; margin-left: 20px;}
         .nav_text:hover{font-size: large; color: black; margin-left: 20px;}
