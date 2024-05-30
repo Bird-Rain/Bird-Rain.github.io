@@ -12,16 +12,6 @@ const routes = {
     "/schedule": "/pages/schedule.html",
 };
 
-const changeClass = (selectedLink) => {
-            document.querySelectorAll('a.nav_select').forEach((link) => {
-                link.classList.remove('nav_select');
-                link.classList.add('nav_text');
-            });
-
-            selectedLink.classList.remove('nav_text');
-            selectedLink.classList.add('nav_select');
-        };
-
 const loadgallery = () => {
     var width = $('[data-role="slider"]').attr('data-width');
     var height = $('[data-role="slider"]').attr('data-height');
@@ -56,7 +46,21 @@ const handleLocation = async () => {
     const html = await fetch(route).then((data) => data.text());
     document.getElementById("main-page").innerHTML = html;
     loadgallery();
-    changeClass(event.target);
+    var navSelectLinks = document.querySelectorAll("a.nav_select");
+    for (var i = 0; i < navSelectLinks.length; i++) {
+        navSelectLinks[i].classList.remove("nav_select");
+        navSelectLinks[i].classList.add("nav_text");
+    }
+    if (path === "/") {
+        document.getElementById("home").classList.remove("nav_text");
+        document.getElementById("home").classList.add("nav_select");
+    } else if (path === "/interested") {
+        document.getElementById("interested").classList.remove("nav_text");
+        document.getElementById("interested").classList.add("nav_select");
+    } else if (path === "schedule") {
+        document.getElementById("schedule").classList.remove("nav_text");
+        document.getElementById("schedule").classList.add("nav_select");
+    }
 };
 
 
