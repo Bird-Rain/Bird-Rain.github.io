@@ -1,4 +1,6 @@
-.top_bar {position: fixed; 
+    
+    /*index*/
+    .top_bar {position: fixed; 
     left: 0; top: 0; right: 0; height: 50px;
     width: 100%;
     margin-right: auto; margin-left: auto;
@@ -12,13 +14,28 @@
     .container_text {margin-left: 50px;}
 
 
+    /*topbar(nav)*/
     .nav_name{font-size: xx-large; font-weight: bold;}
     .nav_text{font-size: x-large; color: gray; text-decoration: none; margin-left: 20px;}
     .nav_text:hover{font-size: x-large; color: black; margin-left: 20px;}
     .nav_select{font-size: x-large; color: black; font-weight:  bold; text-decoration: none; margin-left: 20px;}
     .nav_student_id{font-size: large; font-weight: bold; margin-right: 30%;}
+
+    /*hyperlink*/
+    .hyperlink {color: rgb(160, 124, 80); text-decoration: none;}
+    .hyperlink:hover {color: rgb(85, 68, 48); text-decoration: underline;}
+
+
+    /*interested*/
+    .button {border: none;background-color: rgba(255, 0, 0, 0);}
+    div.item:nth-child(1) {background: rgb(0, 0, 0);}
+    div.item:nth-child(2) {background: rgb(255, 186, 57);}
+    div.item:nth-child(3) {background-color: rgb(146, 211, 93);}
+    #container_image{display: grid;
+        place-items: center;}
     
 
+    /*schedule*/
     #고급파이썬 {background-color: rgb(24, 161, 127);transition: background-color 0.3s ease;}
     #고급파이썬:hover {background-color: green;}
     #고급파이썬:hover::before {content: "고급 파이썬";color: white;font-size: 16px;}
@@ -35,5 +52,7 @@
     #리눅스:hover {background-color: green;}
     #리눅스:hover::before {content: "리눅스";color: white;font-size: 16px;}
 
-    .hyperlink {color: rgb(160, 124, 80); text-decoration: none;}
-    .hyperlink:hover {color: rgb(85, 68, 48); text-decoration: underline;}
+
+
+
+

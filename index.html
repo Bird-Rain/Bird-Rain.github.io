@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>week9</title>
 </head>
+
 <body>
     <div id="root">
         <!-- 탑바 및 하이퍼링크 -->
@@ -19,6 +21,26 @@
 
         <!--메인-->
         <div id="main"></div>
+        <div class="container">
+            <button class="button" id="left-button">&#60;</button>
+            <div data-role="slider" data-width="500" data-height="300">
+                <div class="container_slide">
+                    <div class="item" id="container_image">
+                        <a href="https://unity.com/" target="_blank"><img src=images/unity.png alt="유니티" width="200" /></a>
+                    </div>
+
+                    <div class="item" id="container_image">
+                        <a href="https://www.ea.com/games/apex-legends" target="_blank"><img src=images/apex.png alt="에이펙스" width="200" /></a>
+                    </div>
+
+                    <div class="item" id="container_image">
+                        <a href="https://www.minecraft.net/" target="_blank"><img src=images/minecraft.png alt="마인크래프트" width="300" /></a>
+                    </div>
+                </div>
+            </div>
+            <button class="button" id="right-button">&#62;</button>
+        </div>
+
 
         <!-- 하단 이메일 -->
         <div class="container">
@@ -26,6 +48,10 @@
         </div>
 
         <script src="js/router.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/gallery.js"></script>
+
     </div>
 </body>
+
 </html>
