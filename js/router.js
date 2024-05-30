@@ -15,8 +15,12 @@ const routes = {
 const handleLocation = async () => {
     const path = window.location.pathname;
     const route = routes[path];
-    const html = await fetch(route).then((data) => data.text());
-    document.getElementById("main-page").innerHTML = html;
+    if (route) {
+        const html = await fetch(route).then((data) => data.text());
+        document.getElementById("main-page").innerHTML = html;
+    }else{
+        document.getElementById("main-page").innerHTML = "<h2>404 - Page Not Found</h2>";
+    }
 };
 
 window.onpopstate = handleLocation;
